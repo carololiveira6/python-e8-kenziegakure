@@ -14,16 +14,17 @@ class Ninja():
         self.concious = concious
 
     def learn_jutsu(self, jutsu):
+        
         self.jutsu_list.append(jutsu)
 
-        return 'O ninja Naruto Uzumaki acabou de aprender um novo jutsu: Rasengan'
+        return f'O ninja Naruto Uzumaki acabou de aprender um novo jutsu: {jutsu.jutsu_name}'
 
 if __name__ == '__main__':
 
-    # rasengan = Jutsu('Rasengan', 'Vento', 'a', 20, -15)
-    # naruto = Ninja('Naruto', 'Uzumaki', 'Konoha')
+    rasengan = Jutsu('Rasengan', 'Vento', 'a', 20, -15)
+    naruto = Ninja('Naruto', 'Uzumaki', 'Konoha')
+    res = naruto.learn_jutsu(rasengan)
+    print(res)
     # narutinho = Ninja('Narutinho', 'Uzumaki', 'Konoha', '5kyiu', ['fire', 'wind'], 30, 40, False)
     # print(naruto.__dict__)
     # # print(narutinho.__dict__)
-    # res = naruto.learn_jutsu(rasengan)
-    # print(res)
